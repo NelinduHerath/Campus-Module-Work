@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Form Validation</title>
+    <script language="javascript" type="text/javascript">
+        function validateForm() {
+            if (document.MyForm.uname.value.length == 0) {
+                window.alert("Please enter a name");
+                return false;
+            }
+            if (isNaN(document.MyForm.age.value) || document.MyForm.age.value.trim() === "") {
+                window.alert("Enter age / age should be numeric");
+                return false;
+            }
+            if (!document.MyForm.gender[0].checked && !document.MyForm.gender[1].checked) {
+                window.alert("Please select your gender");
+                return false;
+            }
+            if (!document.MyForm.newsletter.checked) {
+                window.alert("Do you agree to our terms and conditions?");
+                return false;
+            }
+            window.alert("Form is valid!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form name="MyForm">
+        Name: <input type="text" name="uname" id="name"><br><br>
+        Age: <input type="text" name="age" id="age"><br><br>
+        Gender:
+        Male <input type="radio" name="gender" id="male">
+        Female <input type="radio" name="gender" id="female"><br><br>
+        Do you want to subscribe to our newsletter?
+        <input type="checkbox" name="newsletter" id="newsletter"><br><br>
+        <input type="button" value="Validate" onclick="validateForm()">
+    </form>
+</body>
+</html>
