@@ -1,0 +1,38 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <h1><center>login form</center></h1>
+
+        <from id="longin form" style="border:1;border-radius:5px;">
+            <label for="">user name</label><br>
+
+            <input type="text"id="username"><br><br>
+            
+            <label for="">Password</label><br>
+            <input type="password" id="password"><br><br>
+
+            <label for="">Age:</label><br>
+            <input type="text" id="age"><br><br>
+
+            <input type="button" value="login" onclick="validateForm">
+            <input type="reset" value="Clear">
+        </from>
+        <script>
+            function validateForm(){
+                let username=document.getElementById("username").value;
+                let password=document.getElementById("password").value;
+                let age=document.getElementById("age").value;
+
+                if(username==""){
+                    alert("username cannot be empty");
+                    return;
+
+
+                }
+            }
+        </script>
+
+    </body>
+</html>
